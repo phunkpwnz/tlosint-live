@@ -133,4 +133,7 @@ chmod +x /usr/bin/wikileaker
 
 chmod +x /usr/share/updater/updater.sh
 chmod +x /etc/skel/Desktop/Updater.desktop
+
+rm -f /usr/share/applications/tor-browser.desktop
+rm -f /usr/share/applications/tor-browser-settings.desktop
 EOS
