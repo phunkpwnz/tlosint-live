@@ -62,6 +62,7 @@ https://www.tracelabs.org/initiatives/osint-vm
 * Metagoofil
 * Spiderpig
 * WebHTTrack Website Copier
+* WMN Screenshooter
 * Youtube-DL
 
 **Email**

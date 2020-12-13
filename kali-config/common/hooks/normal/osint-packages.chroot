@@ -137,6 +137,10 @@ git clone --recursive https://github.com/swedishmike/WMN_screenshooter /usr/shar
 cd /usr/share/WMN_screenshooter
 pip install -r requirements.txt
 
+wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip --directory-prefix /tmp
+cd /tmp && unzip chromedriver_linux64.zip
+mv chromedriver /usr/bin/chromedriver
+
 chmod +x /usr/share/updater/updater.sh
 chmod +x /etc/skel/Desktop/Updater.desktop
 EOS
