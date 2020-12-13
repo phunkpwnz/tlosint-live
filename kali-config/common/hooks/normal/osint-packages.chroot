@@ -133,6 +133,10 @@ python3 setup.py install
 
 npm i -g tiktok-scraper
 
+git clone --recursive https://github.com/swedishmike/WMN_screenshooter /usr/share/WMN_screenshooter
+cd /usr/share/WMN_screenshooter
+pip install -r requirements.txt
+
 chmod +x /usr/share/updater/updater.sh
 chmod +x /etc/skel/Desktop/Updater.desktop
 EOS
