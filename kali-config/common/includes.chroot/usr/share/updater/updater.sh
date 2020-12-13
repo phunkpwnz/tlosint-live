@@ -237,3 +237,15 @@ tput setaf 2;echo "[+] Done."
 
 ############################
 
+tput setaf 5;echo "[+] Updating WMN_screenshooter..."
+{
+  if [ -d "/usr/share/WMN_screenshooter" ]; then        
+    cd /usr/share/WMN_screenshooter
+    sudo git pull https://github.com/swedishmike/WMN_screenshooter --rebase
+	else
+    sudo git clone https://github.com/swedishmike/WMN_screenshooter /usr/share/WMN_screenshooter
+	fi
+}
+tput setaf 2;echo "[+] Done."
+
+############################
