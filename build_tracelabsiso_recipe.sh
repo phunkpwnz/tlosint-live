@@ -143,7 +143,8 @@ function tlosint-install {
 		# Clone the Kali live-build and Tracelabs repositories 
 		echo "[+] tlosint-live & live-build-config directories not found, creating."
 		git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git /opt/live-build-config
-		git clone https://github.com/tracelabs/tlosint-live.git /opt/tlosint-live
+		# git clone https://github.com/tracelabs/tlosint-live.git /opt/tlosint-live
+		git clone https://github.com/phunkpwnz/tlosint-live.git /opt/tlosint-live
 		tlosint-install
 	fi
 }
