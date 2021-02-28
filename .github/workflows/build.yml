@@ -32,7 +32,14 @@ jobs:
         df -h
         pwd
         lsblk
-        sudo find /var/ -type f -printf "%s\t%p\n" | sort -n | tail -10
+        #sudo find /var/ -type f -printf "%s\t%p\n" | sort -n | tail -10
+        rm -rf /var/lib/mysql/ib_logfile0
+        df -h
+        rm -rf /var/lib/mysql/ib_logfile1
+        df -h
+        rm -rf /var/lib/apt/lists/azure.archive.ubuntu.com_ubuntu_dists_bionic_universe_binary-i386_Packages
+        df -h
+        rm -rf /var/lib/apt/lists/azure.archive.ubuntu.com_ubuntu_dists_bionic_universe_binary-amd64_Packages
         # wget -O - https://raw.githubusercontent.com/tracelabs/tlosint-live/dev/build_tracelabsiso_recipe.sh | sudo bash
         #wget -O - https://raw.githubusercontent.com/phunkpwnz/tlosint-live/master/build_tracelabsiso_recipe.sh | sudo bash
         #zip kali-linux-rolling-live-tracelabs-amd64.zip /opt/live-build-config/images/kali-linux-rolling-live-tracelabs-amd64.iso
