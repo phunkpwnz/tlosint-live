@@ -30,6 +30,8 @@ jobs:
     - name: Run a multi-line script (build the ISO)
       run: |
         df -h
+        pwd
+        lsblk
         # wget -O - https://raw.githubusercontent.com/tracelabs/tlosint-live/dev/build_tracelabsiso_recipe.sh | sudo bash
         #wget -O - https://raw.githubusercontent.com/phunkpwnz/tlosint-live/master/build_tracelabsiso_recipe.sh | sudo bash
         #zip kali-linux-rolling-live-tracelabs-amd64.zip /opt/live-build-config/images/kali-linux-rolling-live-tracelabs-amd64.iso
