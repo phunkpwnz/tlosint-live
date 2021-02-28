@@ -35,7 +35,7 @@ jobs:
         #sudo find /var/ -type f -printf "%s\t%p\n" | sort -n | tail -10
         #rm -rf /var/lib/mysql/ib_logfile0
         df -h
-        rm -rf /var/lib/mysql/ib_logfile1
+        sudo rm -rf /var/lib/mysql/ib_logfile1
         df -h
         rm -rf /var/lib/apt/lists/azure.archive.ubuntu.com_ubuntu_dists_bionic_universe_binary-i386_Packages
         df -h
