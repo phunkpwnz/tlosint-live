@@ -47,7 +47,7 @@ jobs:
         echo "After android sdk removal"
         df -h
         lsblk
-        sudo docker system prune --all
+        sudo docker system prune --all -f
         sudo find /var/lib/docker/containers/ -type f -name “*.log” -delete
         echo "After cleaning up docker"
         df -h
