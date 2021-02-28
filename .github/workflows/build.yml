@@ -47,6 +47,11 @@ jobs:
         echo "After android sdk removal"
         df -h
         lsblk
+        sudo docker system prune --all
+        sudo find /var/lib/docker/containers/ -type f -name “*.log” -delete
+        echo "After cleaning up docker"
+        df -h
+        lsblk
         # wget -O - https://raw.githubusercontent.com/tracelabs/tlosint-live/dev/build_tracelabsiso_recipe.sh | sudo bash
         #wget -O - https://raw.githubusercontent.com/phunkpwnz/tlosint-live/master/build_tracelabsiso_recipe.sh | sudo bash
         #zip kali-linux-rolling-live-tracelabs-amd64.zip /opt/live-build-config/images/kali-linux-rolling-live-tracelabs-amd64.iso
