@@ -32,7 +32,7 @@ jobs:
         df -h
         pwd
         lsblk
-        sudo du -ha /var | sort -n -r | head -n 20
+        sudo find / -type f -printf "%s\t%p\n" | sort -n | tail -1
         # wget -O - https://raw.githubusercontent.com/tracelabs/tlosint-live/dev/build_tracelabsiso_recipe.sh | sudo bash
         #wget -O - https://raw.githubusercontent.com/phunkpwnz/tlosint-live/master/build_tracelabsiso_recipe.sh | sudo bash
         #zip kali-linux-rolling-live-tracelabs-amd64.zip /opt/live-build-config/images/kali-linux-rolling-live-tracelabs-amd64.iso
