@@ -42,6 +42,11 @@ jobs:
         sudo rm -rf /var/lib/apt/lists/azure.archive.ubuntu.com_ubuntu_dists_bionic_universe_binary-amd64_Packages
         sudo rm -rf /opt/android/
         df -h
+        ls -al
+        sudo apt remove android-sdk
+        echo "After android sdk removal"
+        df -h
+        lsblk
         # wget -O - https://raw.githubusercontent.com/tracelabs/tlosint-live/dev/build_tracelabsiso_recipe.sh | sudo bash
         #wget -O - https://raw.githubusercontent.com/phunkpwnz/tlosint-live/master/build_tracelabsiso_recipe.sh | sudo bash
         #zip kali-linux-rolling-live-tracelabs-amd64.zip /opt/live-build-config/images/kali-linux-rolling-live-tracelabs-amd64.iso
