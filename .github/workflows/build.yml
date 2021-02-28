@@ -52,6 +52,13 @@ jobs:
         echo "After cleaning up docker"
         df -h
         lsblk
+        echo "Cleaning up APT"
+        sudo apt-get clean
+        sudo journalctl --vacuum-time=1d
+        sudo apt-get autoremove
+        sudo du -h /var/lib/snapd/snaps
+        df -h
+        lsblk
         # wget -O - https://raw.githubusercontent.com/tracelabs/tlosint-live/dev/build_tracelabsiso_recipe.sh | sudo bash
         #wget -O - https://raw.githubusercontent.com/phunkpwnz/tlosint-live/master/build_tracelabsiso_recipe.sh | sudo bash
         #zip kali-linux-rolling-live-tracelabs-amd64.zip /opt/live-build-config/images/kali-linux-rolling-live-tracelabs-amd64.iso
