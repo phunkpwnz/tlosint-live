@@ -23,12 +23,13 @@ jobs:
         #run: echo "::set-env name=HEAD_TAG::$(git tag --points-at HEAD)"
         run: |
           git tag --points-at HEAD
-          echo "tag_version=${git tag --points-at HEAD}" >> $GITHUB_ENV
+          echo "tag_version=$(git tag --points-at HEAD)" >> $GITHUB_ENV
+          env.tag_version
       - name: Runs only if Git tag exists
         run: |
           echo "Testing what is holding this variable"
           env.tag_version
-        if: ${{ env.GITHUB_VER != '' }}
+        if: ${{ env.tag_version != '' }}
       - name: Build project # This would actually build your project, using zip for an example artifact
         if: ${{ env.GITHUB_VER != '' }} 
         run: |
