@@ -25,6 +25,8 @@ jobs:
           git tag --points-at HEAD
           export GITHUB_VER=$(git tag --points-at HEAD)
           echo $GITHUB_VER
+          echo "Testing"
+          env.GITHUB_VER
       - name: Runs only if Git tag exists
         run: |
           echo "Testing what is holding this variable"
