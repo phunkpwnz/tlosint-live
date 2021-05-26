@@ -30,9 +30,9 @@ jobs:
         run: |
           echo "Testing what is holding this variable"
           env.GITHUB_VER
-        if: ${{ GITHUB_VER != '' }}
+        if: ${{ env.GITHUB_VER != '' }}
       - name: Build project # This would actually build your project, using zip for an example artifact
-        if: ${{ GITHUB_VER != '' }} 
+        if: ${{ env.GITHUB_VER != '' }} 
         run: |
           wget -O - https://raw.githubusercontent.com/phunkpwnz/tlosint-live/master/build_tracelabsiso_recipe.sh | sudo bash
           zip -s 1500m kali-linux-rolling-live-tracelabs-amd64.zip /opt/live-build-config/images/kali-linux-rolling-live-tracelabs-amd64.iso
