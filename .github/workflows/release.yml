@@ -26,7 +26,9 @@ jobs:
           export GITHUB_VER=$(git tag --points-at HEAD)
           echo $GITHUB_VER
       - name: Runs only if Git tag exists
-        run: env.GITHUB_VER
+        run: |
+          echo "Testing what is holding this variable"
+          env.GITHUB_VER
         if: env.GITHUB_VER != ''
       - name: Build project # This would actually build your project, using zip for an example artifact
         if: env.GITHUB_VER != '' 
