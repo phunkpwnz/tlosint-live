@@ -34,7 +34,9 @@ jobs:
         id: get_version
         if: steps.check-tag.outputs.tag_exists == 'true' 
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-        
+      - name: Check tag details
+        if: steps.check-tag.outputs.tag_exists == 'true'
+        run: echo ${{ steps.get_version.outputs.VERSION }}
       - name: Build project # This would actually build your project, using zip for an example artifact
         if: steps.check-tag.outputs.match == 'true' 
         run: |
